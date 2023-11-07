@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="centered-card" class="ion-justify-content-start">
+  <div style="display: flex; justify-content: center; align-items: center; ">
+  <ion-card class="ion-text-center" style="max-width: 800px;min-width: 400px;">
+    <img alt="login" src="../../assets/login.png" width="250" height="250" />
+    <ion-card-header>
+      <ion-card-title>Bienvenido</ion-card-title>
+      <ion-card-subtitle>Introduzca sus credenciales</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <form [formGroup]="loginForm"> 
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="text"  formControlName="mail" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password"  formControlName="pass" ></ion-input>
+      </ion-item>
+      <ion-button  expand="block" type="submit" [disabled]="!loginForm.valid" (click)="login()">Login</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</div>
+</ion-content>
+
