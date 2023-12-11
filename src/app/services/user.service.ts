@@ -6,6 +6,7 @@ import { userLogin } from '../models/user';
 })
 export class UserService {
   private users: userLogin[] = [];
+  private logged : boolean=false;
   constructor() { 
     this.users.push({
       mail: "ivgurobleshe@ittepic.edu.mx",
@@ -25,5 +26,8 @@ export class UserService {
       }
     }
     return false;
+  }
+  public getLogged(){
+    return this.logged;
   }
 }

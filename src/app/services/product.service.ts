@@ -52,6 +52,7 @@ export class ProductService {
     this.products.push(product);
     return this.products;
   }
+  
   public updateProduct(index: number, product: Product): Product[] {
     this.products[index] = product;
     return this.products;
